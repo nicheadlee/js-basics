@@ -302,38 +302,88 @@
  * Function Statements and expressions
  */
 
-var whatDoYouDo = function(job, firstName) {
-    switch(job) {
-        case 'teacher':
-            return firstName + ' teaches kids how to code';
-        case 'driver':
-            return firstName + ' drives cars';
-        case 'designer':
-            return firstName + ' designs cool shit';
-        default:
-            return firstName + ' does something else.';
-    }
+// var whatDoYouDo = function(job, firstName) {
+//     switch(job) {
+//         case 'teacher':
+//             return firstName + ' teaches kids how to code';
+//         case 'driver':
+//             return firstName + ' drives cars';
+//         case 'designer':
+//             return firstName + ' designs cool shit';
+//         default:
+//             return firstName + ' does something else.';
+//     }
+// }
+
+// console.log(whatDoYouDo('teacher', 'John'));
+// console.log(whatDoYouDo('designer', 'Jane'));
+// console.log(whatDoYouDo('retired', 'Mark'));
+
+
+/*****************
+ * Arrays
+ */
+
+ // Initialize new array
+
+//  var names = ['Nic', 'Ari', 'Dustin', 'Brynne'];
+//  var years = new Array(1990, 1969, 1982, 1980);
+
+// console.log(names[2]);
+// console.log(names.length);
+
+// // Mutate array data
+// names[2] = 'Jill';
+// names[names.length] = 'Mary';
+// console.log(names);
+
+// // Different data types
+// var nic = ['Nic', 'Headlee', 1987, 'designer', true];
+
+// nic.push('red');
+// nic.unshift('Mr.');
+// console.log(nic);
+
+// nic.pop();
+// nic.pop();
+// nic.shift();
+// console.log(nic);
+
+// var isDesigner = nic.indexOf('designer') === -1 ? 'Nic is Not a designer' : 'Nic IS a designer';
+// console.log(isDesigner);
+
+// nic.indexOf('designer');
+
+// Bill ammounts = 124, 48, 268
+// Tip ranges = 
+// if bill is 0 to $50 then 20%
+// if bill is 50.01 to 200 then 15%
+// if bill is 200.01 + then 10%
+
+
+function tipAmounts(mealCost) {
+    var percentage;
+    if (mealCost < 50) {
+        percentage = .2;
+    } else if
+        (mealCost >= 50 && mealCost < 200) {
+            percentage = .15;
+    } else {
+            percentage = .1;
+        }
+        return percentage * mealCost;
 }
 
-console.log(whatDoYouDo('teacher', 'John'));
-console.log(whatDoYouDo('designer', 'Jane'));
-console.log(whatDoYouDo('retired', 'Mark'));
-console.log('test');
-console.log('test 2');
+var mealCost = ['124', '48', '268'];
+var tips = [tipAmounts(mealCost[0]),
+            tipAmounts(mealCost[1]),
+            tipAmounts(mealCost[2])];
 
+var finalBill = [mealCost[0] + tips[0],
+                mealCost[1] + tips[1],
+                mealCost[2] + tips[2]];
 
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(tips, finalBill);
 
 
 
