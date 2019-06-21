@@ -361,33 +361,110 @@
 // if bill is 200.01 + then 10%
 
 
-function tipAmounts(mealCost) {
-    var percentage;
-    if (mealCost < 50) {
-        percentage = .2;
-    } else if
-        (mealCost >= 50 && mealCost < 200) {
-            percentage = .15;
-    } else {
-            percentage = .1;
-        }
-        return percentage * mealCost;
-}
+// function tipAmounts(mealCost) {
+//     var percentage;
+//     if (mealCost < 50) {
+//         percentage = .2;
+//     } else if
+//         (mealCost >= 50 && mealCost < 200) {
+//             percentage = .15;
+//     } else {
+//             percentage = .1;
+//         }
+//         return percentage * mealCost;
+// }
 
-var mealCost = ['124', '48', '268'];
-var tips = [tipAmounts(mealCost[0]),
-            tipAmounts(mealCost[1]),
-            tipAmounts(mealCost[2])];
+// var mealCost = ['124', '48', '268'];
+// var tips = [tipAmounts(mealCost[0]),
+//             tipAmounts(mealCost[1]),
+//             tipAmounts(mealCost[2])];
 
-var finalBill = [mealCost[0] + tips[0],
-                mealCost[1] + tips[1],
-                mealCost[2] + tips[2]];
+// var finalBill = [mealCost[0] + tips[0],
+//                 mealCost[1] + tips[1],
+//                 mealCost[2] + tips[2]];
 
-console.log(tips, finalBill);
+// console.log(tips, finalBill);
+
+/*********************
+ * Objects and properties
+ */
+// Object literal
+//  var nic = {
+//      firstName: 'Nic',
+//      lastName: 'Headlee',
+//      birthYear: 1987,
+//      family: ['Jane', 'Kris', 'Ari', 'Michelle'],
+//      job: 'programmer',
+//      isMarried: true
+//  };
+
+// console.log(nic.firstName);
+// console.log(nic['lastName']);
+// var x = 'birthYear';
+// console.log(nic[x]);
+
+// nic.job = 'designer';
+// nic['isMarried'] = false;
+// console.log(nic);
+
+// new Object syntax
+// var nic = new Object();
+// nic.firstName = 'Nic';
+// nic.birthYear = 1987;
+// nic['lastName'] = 'Headlee';
+// console.log(nic);
+
+// Objects and methods
+
+//  var nic = {
+//      firstName: 'Nic',
+//      lastName: 'Headlee',
+//      birthYear: 1987,
+//      family: ['Jane', 'Kris', 'Ari', 'Michelle'],
+//      job: 'programmer',
+//      isMarried: true,
+//      calcAge: function() {
+//         this.age = 2019 - this.birthYear;
+//      }
+//  };
+
+// nic.calcAge();
+// console.log(nic.age);
 
 
+/***************
+ * Coding Challenge 4
+ */
 
+ var mark = {
+     firstName: 'Mark',
+     lastName: 'Mathews',
+     bodyMass: 90,
+     height: 2,
+     calcBMI: function () {
+         this.bmi = this.bodyMass / (this.height * this.height);
+         return this.bmi;
+     }
+ };
 
+var john = {
+    firstName: 'John',
+    lastName: 'Doe',
+    bodyMass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.bodyMass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+
+if (mark.calcBMI() > john.calcBMI()) {
+    console.log(mark.firstName + ' ' + mark.lastName + ' has a higher BMI of ' + mark.bmi + ' versus ' + john.firstName + ' ' + john.lastName + ' BMI of ' + john.bmi);
+} else if (mark.bmi < john.bmi) {
+    console.log(john.firstName + ' ' + john.lastName + ' has a higher BMI of ' + john.bmi + ' versus ' + mark.firstName + ' ' + mark.lastName + ' BMI of ' + mark.bmi);
+} else {
+    console.log(john.firstName + ' and ' + mark.firstName + ' have the same BMI of ' + mark.bmi);
+};
 
 
 
