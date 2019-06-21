@@ -467,7 +467,7 @@ if (mark.calcBMI() > john.calcBMI()) {
 };
 
 
-
+console.log('Testing from other laptop');
 
 
 
