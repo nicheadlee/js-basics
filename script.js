@@ -436,38 +436,140 @@
  * Coding Challenge 4
  */
 
- var mark = {
-     firstName: 'Mark',
-     lastName: 'Mathews',
-     bodyMass: 90,
-     height: 2,
-     calcBMI: function () {
-         this.bmi = this.bodyMass / (this.height * this.height);
-         return this.bmi;
-     }
- };
+//  var mark = {
+//      firstName: 'Mark',
+//      lastName: 'Mathews',
+//      bodyMass: 90,
+//      height: 2,
+//      calcBMI: function () {
+//          this.bmi = this.bodyMass / (this.height * this.height);
+//          return this.bmi;
+//      }
+//  };
 
-var john = {
-    firstName: 'John',
-    lastName: 'Doe',
-    bodyMass: 78,
-    height: 1.69,
-    calcBMI: function () {
-        this.bmi = this.bodyMass / (this.height * this.height);
-        return this.bmi;
-    }
-};
+// var john = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     bodyMass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         this.bmi = this.bodyMass / (this.height * this.height);
+//         return this.bmi;
+//     }
+// };
 
-if (mark.calcBMI() > john.calcBMI()) {
-    console.log(mark.firstName + ' ' + mark.lastName + ' has a higher BMI of ' + mark.bmi + ' versus ' + john.firstName + ' ' + john.lastName + ' BMI of ' + john.bmi);
-} else if (mark.bmi < john.bmi) {
-    console.log(john.firstName + ' ' + john.lastName + ' has a higher BMI of ' + john.bmi + ' versus ' + mark.firstName + ' ' + mark.lastName + ' BMI of ' + mark.bmi);
-} else {
-    console.log(john.firstName + ' and ' + mark.firstName + ' have the same BMI of ' + mark.bmi);
-};
+// if (mark.calcBMI() > john.calcBMI()) {
+//     console.log(mark.firstName + ' ' + mark.lastName + ' has a higher BMI of ' + mark.bmi + ' versus ' + john.firstName + ' ' + john.lastName + ' BMI of ' + john.bmi);
+// } else if (mark.bmi < john.bmi) {
+//     console.log(john.firstName + ' ' + john.lastName + ' has a higher BMI of ' + john.bmi + ' versus ' + mark.firstName + ' ' + mark.lastName + ' BMI of ' + mark.bmi);
+// } else {
+//     console.log(john.firstName + ' and ' + mark.firstName + ' have the same BMI of ' + mark.bmi);
+// };
 
 
-console.log('Testing from other laptop');
+// console.log('Testing from other laptop');
+
+
+
+/****************
+ * Loops and Iteration
+ */
+
+//  for (var i = 1; i <= 20; i += 2) {
+//      console.log(i);
+//  }
+
+// i = 0, 0 < 10 is true, log i to console, i++
+// i = 1, 1 < 10 is true, log i to the console, i++
+// ...
+// i = 9, 9 < 10 is true, log i to the console, i++
+// i = 10, 10 < 10 is false, exit the loop
+
+
+// var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+
+// // for loop
+// for (var i = 0; i < john.length; i++) {
+//     console.log(john[i]);
+// }
+
+// while loop
+// var i = 0;
+// while(i < john.length) {
+//     console.log(john[i]);
+//     i++;
+// }
+
+// continue and break statements 
+
+/*
+var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+// continue statement
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') continue;
+    console.log(john[i]);
+}
+// break statement
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') break;
+    console.log(john[i]);
+}
+*/
+
+// var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+
+// Looping Backwards
+
+// for (var i = john.length - 1; i >= 0; i--) {
+//     console.log(john[i]);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
