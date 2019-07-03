@@ -524,6 +524,9 @@ for (var i = 0; i < john.length; i++) {
 //     console.log(john[i]);
 // }
 
+// Next Code Challenge
+
+
 
 
 
